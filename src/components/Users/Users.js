@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Users = () => {
-    const [users, setUsers] = useState();
+    const [users, setUsers] = useState([]);
     useEffect(()=> {
         fetch('http://localhost:5000/users')
         .then(res => res.json())
